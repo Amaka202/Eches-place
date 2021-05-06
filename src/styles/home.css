@@ -1,0 +1,13 @@
+header{
+    background-color: wheat;
+    padding: 2rem;
+}
+
+main{
+    min-height: 80vh;
+}
+
+footer{
+    background-color: wheat;
+    padding: 1rem 2rem;
+}
