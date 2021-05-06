@@ -1,3 +1,6 @@
+An E-commerce website built with React, Redux, Node, Express and Mongodb
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
