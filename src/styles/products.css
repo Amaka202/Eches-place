@@ -48,21 +48,10 @@
     align-self: center;
 }
 
-
-
-button{
-    padding: 1rem;
-    border: .1rem #c0c0c0 solid;
-    background-color: #FFBC42;
-    
-}
-
-button:hover{
-
-}
-
 .btn-primary{
     background-color: #8ea604;
+    padding: 1rem;
+    border: .1rem #c0c0c0 solid;
     cursor: pointer;
     border-radius: 5px;
 }
