@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import './styles/home.css';
 import data from './data.json';
+import Products from './components/Products';
 
 
 class App extends React.Component {
@@ -23,8 +24,9 @@ class App extends React.Component {
         <main>
           <h1>Products</h1>
           <div className="display-products">
-            <div className="products">
+            <div className="products-div">
               <h3>Products</h3>
+              <Products products={this.state.products}/>
             </div>
             <div className="cart">
               <h3>Cart</h3>
