@@ -11,3 +11,16 @@ footer{
     background-color: wheat;
     padding: 1rem 2rem;
 }
+
+.display-products{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products{
+    width: 60%;
+}
+
+.cart{
+    width: 40%;
+}

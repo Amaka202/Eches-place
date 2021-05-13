@@ -1,20 +1,43 @@
+import React from 'react'
 import './App.css';
 import './styles/home.css';
+import data from './data.json';
 
-function App() {
-  return (
-    <div className="app-container">
-      <header>
-        <a href="/">Eche's Place</a>
-      </header>
-      <main>
-        <h1>Products</h1>
-      </main>
-      <footer>
-        <p>All rights reserved </p>
-      </footer>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      products: data.products,
+      size: "",
+      sort: ""
+    }
+  }
+
+  render (){
+    return (
+      <div className="app-container">
+        <header>
+          <a href="/">Eche's Place</a>
+        </header>
+        <main>
+          <h1>Products</h1>
+          <div className="display-products">
+            <div className="products">
+              <h3>Products</h3>
+            </div>
+            <div className="cart">
+              <h3>Cart</h3>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <p>All rights reserved </p>
+        </footer>
+      </div>
+    );
+
+  }
 }
 
 export default App;
