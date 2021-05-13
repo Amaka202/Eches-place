@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import './styles/home.css';
+import data from './data.json';
+import Products from './components/Products';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      products: data.products,
+      size: "",
+      sort: ""
+    }
+  }
+
+  render (){
+    return (
+      <div className="app-container">
+        <header>
+          <a href="/">Eche's Place</a>
+        </header>
+        <main>
+          <h1>Products</h1>
+          <div className="display-products">
+            <div className="products-div">
+              <h3>Products</h3>
+              <Products products={this.state.products}/>
+            </div>
+            <div className="cart">
+              <h3>Cart</h3>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <p>All rights reserved </p>
+        </footer>
+      </div>
+    );
+
+  }
 }
 
 export default App;
