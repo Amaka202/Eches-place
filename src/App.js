@@ -37,6 +37,14 @@ class App extends React.Component {
     })
   }
 
+  removeFromCart = (productId) => {
+    const cartItems = [...this.state.cartItems]
+    this.setState({
+      cartItems: cartItems.filter(item => item._id !== productId)
+    })
+    
+  }
+
   sortProducts = (e) => {
 
     let value = e.target.value
@@ -92,7 +100,7 @@ class App extends React.Component {
             </div>
             <div className="cart-div">
               <h3>Cart</h3>
-              <Cart cartItems={this.state.cartItems}/>
+              <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart}/>
             </div>
           </div>
         </main>

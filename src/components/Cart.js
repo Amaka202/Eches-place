@@ -8,11 +8,11 @@ export default class Cart extends Component {
         return (
             <div>
                 <div>
-                {cartItems.length === 0 ? <div className='cart cart-header'>Cart is empty</div>
-                : 
-                <div className='cart cart-header'> You have {cartItems.length} in the cart</div>
-                }
-            </div>
+                    {cartItems.length === 0 ? <div className='cart cart-header'>Cart is empty</div>
+                    : 
+                    <div className='cart cart-header'> You have {cartItems.length} in the cart</div>
+                    }
+                </div>
             <div>
                 <div className="cart">
                     <ul className="cart-items">
@@ -31,6 +31,19 @@ export default class Cart extends Component {
                     </ul>
                 </div>
             </div>
+                {cartItems.length > 0 && 
+                <div className='cart'>
+                    <div className='total'>
+                            <div>
+                                Total:{' '}
+                                {formatCurrency(cartItems.reduce((a, c) => a + c.price * c.count, 0))}
+                            </div>
+                            <div>
+                                <button className='btn-primary'>Proceed</button>
+                            </div>
+                    </div>
+                </div>
+                }
             </div>
         )
     }
