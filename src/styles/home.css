@@ -21,7 +21,7 @@ footer{
     width: 60%;
 }
 
-.cart{
+.cart-div{
     width: 40%;
 }
 
@@ -31,6 +31,10 @@ footer{
     }
 
     .products-div{
+        width: 100%;
+    }
+
+    .cart-div{
         width: 100%;
     }
 }
